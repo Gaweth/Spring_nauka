@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <jsp:useBean id="now" class="java.util.Date"/>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@include file="dynamic/css.jsp"%>
+<%@include file="../dynamic/css.jsp"%>
 
 
 
@@ -11,7 +11,7 @@
 <!-- Page Wrapper -->
 <div id="wrapper">
 
-<%@include file="dynamic/navigationMain.jspf"%>
+<%@include file="../dynamic/navigationMain.jspf"%>
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -191,9 +191,9 @@
         </div>
         <!-- End of Main Content -->
 
-     <%@include file="dynamic/board.jspf"%>
+     <%@include file="../dynamic/board.jspf"%>
 
-<%@include file="dynamic/javaScript.jspf"%>
+<%@include file="../dynamic/javaScript.jspf"%>
 </body>
 
 </html>
