@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class Course {
 
-    @RequestMapping(value = { "/course"}, method = RequestMethod.GET)
-    public String getLogin(){
+    @RequestMapping(value = {"/course"}, method = RequestMethod.GET)
+    public String getCourse() {
         return "course/course";
     }
 }

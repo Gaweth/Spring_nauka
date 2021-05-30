@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class Tasks {
 
 
-    @RequestMapping(value = { "/tasks"}, method = RequestMethod.GET)
-    public String getTasks(){
+    @RequestMapping(value = {"/tasks"}, method = RequestMethod.GET)
+    public String getTasks() {
         return "tasks/tasks";
     }
 
-    @RequestMapping(value = { "/addTask"}, method = RequestMethod.GET)
-    public String getAddTasks(){
+    @RequestMapping(value = {"/addTask"}, method = RequestMethod.GET)
+    public String getAddTasks() {
         return "tasks/addTask";
     }
 }

@@ -7,17 +7,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class PersonList {
 
-    @RequestMapping(value = { "/personList"}, method = RequestMethod.GET)
-    public String getPersonList(){
+    @RequestMapping(value = {"/personList"}, method = RequestMethod.GET)
+    public String getPersonList() {
         return "persons/personList";
     }
 
-    @RequestMapping(value = { "/editPerson"}, method = RequestMethod.GET)
-    public String getEditPersonList(){
-        return "persons/editPerson";
+
+    @RequestMapping(value = {"/addNewPerson"}, method = RequestMethod.GET)
+    public String getAddNewPerson() {
+        return "persons/addNewPerson";
     }
-    @RequestMapping(value = { "/addNewPersob"}, method = RequestMethod.GET)
-    public String getAddNewPerson(){
-        return "persons/AddNewPerson";
+
+
+    @RequestMapping(value = {"/editPerson"}, method = RequestMethod.GET)
+    public String getEditPerson() {
+        return "persons/editPerson";
     }
 }

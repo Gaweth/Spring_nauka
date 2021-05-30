@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class Technology {
 
-    @RequestMapping(value = { "/technology"}, method = RequestMethod.GET)
-    public String getTechnology(){
+
+    @RequestMapping(value = {"/technology"}, method = RequestMethod.GET)
+    public String getTechnologies() {
         return "technology/technology";
     }
 }
-
-

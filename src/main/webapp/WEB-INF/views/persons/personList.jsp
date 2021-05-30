@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <jsp:useBean id="now" class="java.util.Date"/>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@include file="../dynamic/css.jsp"%>
+<%@include file="../dynamic/css.jspf"%>
 
 <body id="page-top">
 
@@ -61,7 +61,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
-               
+
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -84,8 +84,8 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-        
-        
+
+
                      <!-- Page Heading -->
                 <h1 class="h3 mb-2 text-gray-800">Kursanci</h1>
                 <p class="mb-4">Wszyscy kursanci biorący udział w szkoleniu - SDA | <a
@@ -121,7 +121,7 @@
                                 </tr>
                                 </tfoot>
                                 <tbody>
-                                
+
                                     <tr>
                                         <td>Przykładowe Imię</td>
                                         <td>Przykładowe Nazwisko</td>
@@ -131,15 +131,15 @@
                                          <td>Start</td>
                                         <td><a href="#" role="button" class="btn btn-success btn-circle" data-toggle="modal" data-target="#umiejetnosci"><i class="fas
                                         fa-check"></i></a></td>
-                                       
+
                                         <td><a href='#'
                                                class="btn-right btn btn-primary" role="button">Edytuj</a>
                                         </td>
                                     </tr>
-                             
-                               
-                               
-                               
+
+
+
+
                 <!-- The Modal -->
 <div class="modal" id="umiejetnosci">
 <div class="modal-dialog">
@@ -241,8 +241,8 @@
 
         </div>
     </div>
-</div>                 
-           
+</div>
+
                                 </tbody>
                             </table>
 
@@ -252,8 +252,8 @@
                 </div>
 
 
-   
-    
+
+
 
         </div>
         <!-- /.container-fluid -->
@@ -271,52 +271,9 @@
 
 
             </div>
-     
-     
-     
-     
-      </div>
-      <!-- End of Main Content -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; SDACADEMY 2020</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
 
-    </div>
-    <!-- End of Content Wrapper -->
 
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Uwaga</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Wybierz „Wyloguj” poniżej, jeśli chcesz zakończyć bieżącą sesję.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Anuluj</button>
-          <a class="btn btn-primary" href="#">Wyloguj</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <%@include file="../dynamic/board.jspf"%>
 
