@@ -59,7 +59,7 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">ImiÄ nazwisko</span>
 
                         </a>
                         <!-- Dropdown - User Information -->
@@ -94,7 +94,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Ilość
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">IloĹÄ
                                             (kursanci)
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
@@ -113,7 +113,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Ilość h
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">IloĹÄ h
                                             (kursu)
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">360</div>
@@ -181,7 +181,7 @@
 
             <div class="jumbotron">
 
-                <h1>Projekt zajęciowy</h1>
+                <h1>Projekt zajÄciowy</h1>
                 <p>Bootstrap + JSP + Spring Boot + MySQL</p>
                 <p>Dzisiaj jest: </p>
             </div>

@@ -26,15 +26,15 @@
                 </div>
                 <form class="user">
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Wprowadź swój adres Email...">
+                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="WprowadĹş swĂłj adres Email...">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Hasło">
+                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="HasĹ‚o">
                   </div>
                   <div class="form-group">
                     <div class="custom-control custom-checkbox small">
                       <input type="checkbox" class="custom-control-input" id="customCheck">
-                      <label class="custom-control-label" for="customCheck">Zapamiętaj mnie</label>
+                      <label class="custom-control-label" for="customCheck">ZapamiÄ™taj mnie</label>
                     </div>
                   </div>
                   <a href="../index.jsp" class="btn btn-primary btn-user btn-block">
@@ -44,7 +44,7 @@
 
                 </form>
                 <div class="text-center">
-                  <a class="small" href="register.jsp">Utwórz konto!</a>
+                  <a class="small" href="register.jsp">UtwĂłrz konto!</a>
                 </div>
               </div>
             </div>

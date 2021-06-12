@@ -2,37 +2,34 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <jsp:useBean id="now" class="java.util.Date"/>
 <%@ page contentType="text/html; charset=UTF-8" %>
-​
-​
 <%@include file="../dynamic/css.jspf"%>
-​
-​
+
+
 <body id="page-top">
-​
+
 <!-- Page Wrapper -->
 <div id="wrapper">
-    ​
+
     <%@include file="../dynamic/navigationMain.jspf"%>
-    ​
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-        ​
+
         <!-- Main Content -->
         <div id="content">
-            ​
+
             <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                ​
+
                 <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
                 </button>
-                ​
-                ​
-                ​
+
+
+
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
-                    ​
+
                     <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                     <li class="nav-item dropdown no-arrow d-sm-none">
                         <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,16 +49,16 @@
                             </form>
                         </div>
                     </li>
-                    ​
-                    ​
-                    ​
-                    ​
+
+
+
+
                     <div class="topbar-divider d-none d-sm-block"></div>
-                    ​
+
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">ImiÄ nazwisko</span>
 
                         </a>
                         <!-- Dropdown - User Information -->
@@ -77,74 +74,71 @@
                             </a>
                         </div>
                     </li>
-                    ​
+
                 </ul>
-                ​
+
             </nav>
             <!-- End of Topbar -->
-            ​
             <form name="send" method="post" action='<c:url value="/addNewPerson"/>'>
-                ​
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    ​
+
                     <!-- Content Row -->
                     <div class="row">
                         <div class="col-xl-12 col-md-12 mb-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <div class="form-group row">
-                                        <label  class="col-2 col-form-label">Imię</label>
+                                        <label  class="col-2 col-form-label">ImiÄ</label>
                                         <div class="col-10">
-                                            <input class="form-control" type="text" name="firstName" placeholder="uzupełnij imię">
+                                            <input class="form-control" type="text" name="firstName"
+                                                   placeholder="uzupeĹnij imiÄ">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label  class="col-2 col-form-label">Nazwisko</label>
+                                        <label class="col-2 col-form-label">Nazwisko</label>
                                         <div class="col-10">
-                                            <input class="form-control" type="text" name="lastName" placeholder="uzupełnij nazwisko">
+                                            <input class="form-control" type="text" name="lastName" placeholder="uzupeĹnij nazwisko">
                                         </div>
                                     </div>
-                                    ​
+
                                     <div class="form-group row">
-                                        <label  class="col-2 col-form-label">URL Git</label>
+                                        <label class="col-2 col-form-label">URL Git</label>
                                         <div class="col-10">
-                                            <input class="form-control" type="text" name="github" placeholder="uzupełnij url do gita">
+                                            <input class="form-control" type="text" name="gitHub"
+                                                   placeholder="uzupeĹnij url do gita">
                                         </div>
                                     </div>
-                                    ​
-                                    ​
-                                    ​
+
+
+
                                     <div class="form-group row">
-                                        <label for="start" class="col-2 col-form-label">Od czego się zaczęło:</label>
+                                        <label for="start" class="col-2 col-form-label">Od czego siÄ zaczÄĹo:</label>
                                         <div class="col-10">
                                 <textarea class="form-control" rows="5" id="start" name="start"
-                                          placeholder="napisz kilka słów co Cię zmotywowało aby zostać programistą..."></textarea>
+                                          placeholder="napisz kilka sĹĂłw co CiÄ zmotywowaĹo aby zostaÄ programistÄ..."></textarea>
                                         </div>
                                     </div>
-                                    ​
-                                    ​
+
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <input class="btn btn-success pull-left" type="submit" value="Wyślij" id="searchButton"></input>
-                    ​
-                    ​
-                    ​
-                    ​
+                    <input class="btn btn-success pull-left" type="submit" value="WyĹlij" id="searchButton"></input>
+
+
+
+
                 </div>
                 <!-- /.container-fluid -->
-                ​
             </form>
-            ​
         </div>
         <!-- End of Main Content -->
-        ​
+
         <%@include file="../dynamic/board.jspf"%>
-        ​
-        ​
         <%@include file="../dynamic/javaScript.jspf"%>
+
 </body>
-​
+
 </html>

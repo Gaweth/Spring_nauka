@@ -16,6 +16,7 @@ import java.util.List;
 @Controller
 public class PersonList {
 
+    // realizujemy wstrzyknięcie poprzezk onstruktor
     private final PersonRepository personRepository;
     private final PersonService personService;
 
@@ -24,44 +25,40 @@ public class PersonList {
         this.personService = personService;
     }
 
-
-    //get all persons
+    // get all persons
     @RequestMapping(value = {"/personList"}, method = RequestMethod.GET)
     public String getPersonList(Model model) {
         List<Person> list = personRepository.findAll();
-
         model.addAttribute("person", list);
         return "persons/personList";
     }
 
-
+    // only get view add new person
     @RequestMapping(value = {"/addNewPerson"}, method = RequestMethod.GET)
     public String getAddNewPerson() {
         return "persons/addNewPerson";
     }
 
-
-
-    @RequestMapping(value = {"/editPerson/{id}"}, method = RequestMethod.GET)
-    public String getEditPerson(Model model,@PathVariable("id") Long id) {
-        model.addAttribute("person", personService.getPerson(id));
-        return "persons/editPerson";
-    }
-
-    //save person in database
+    // save person in database
     @RequestMapping(value = {"/addNewPerson"}, method = RequestMethod.POST)
     public RedirectView postAddNewPerson(@ModelAttribute Person newPerson) {
         personRepository.save(newPerson);
-
         return new RedirectView("/personList");
     }
 
-    @RequestMapping(value = {"/editPerson/{id}"}, method = RequestMethod.POST)
-    public RedirectView ed(@ModelAttribute Person person,@PathVariable("id") Long id) {
-        personService.editPerson(person, id);
-
-        return new RedirectView("/personList");
+    // get person for editview
+    @RequestMapping(value = {"/editPerson/{id}"}, method = RequestMethod.GET)
+    public String getEditPerson(Model model, @PathVariable("id") Long id) {
+        Person person = personRepository.findById(id).orElse(null);
+        model.addAttribute("person", person);
+        return "persons/editPerson";
     }
 
+    // save edit person
+    @RequestMapping(value = {"/personList/{id}"}, method = RequestMethod.POST)
+    public RedirectView postEditPerson(@ModelAttribute Person newPerson, @PathVariable("id") Long id) {
+        personRepository.save(newPerson);
+        return new RedirectView("/editPerson/{id}");
+    }
 
 }

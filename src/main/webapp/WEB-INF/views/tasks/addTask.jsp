@@ -57,7 +57,7 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">ImiÄ™ nazwisko</span>
 
                         </a>
                         <!-- Dropdown - User Information -->
@@ -93,11 +93,14 @@
                                 <div class="form-group row">
                                     <label for="firstName" class="col-2 col-form-label">Wybierz kursanta</label>
                                     <div class="col-10">
-                                        <select class="form-control" id="sel1">
+                                        <select class="form-control" id="sel1" name="person.id">
                                             <option hidden>wybierz</option>
-                                            <option>kursant1</option>
-                                            <option>kursant2</option>
-                                            <option>kursant3</option>
+
+                                            <c:forEach items="${person}" var="title">
+                                                <option value="${title.id}">${title.firstName} ${title.lastName}</option>
+                                            </c:forEach>
+
+
                                         </select>
                                     </div>
                                 </div>
@@ -113,7 +116,7 @@
 
 
                                 <div class="form-group row">
-                                    <label for="start" class="col-2 col-form-label">Tresć zadania:</label>
+                                    <label for="start" class="col-2 col-form-label">TresÄ‡ zadania:</label>
                                     <div class="col-10">
                                         <textarea class="form-control" rows="5" id="start" placeholder="tutaj opisz zadanie..."></textarea>
                                     </div>
@@ -163,7 +166,7 @@
 
 
 
-                <input class="btn btn-success pull-left" type="submit" value="Wyślij" id="searchButton"></input>
+                <input class="btn btn-success pull-left" type="submit" value="WyĹ›lij" id="searchButton"></input>
 
 
 

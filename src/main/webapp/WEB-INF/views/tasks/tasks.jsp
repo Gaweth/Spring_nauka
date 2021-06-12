@@ -58,7 +58,7 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">ImiÄ nazwisko</span>
 
                         </a>
                         <!-- Dropdown - User Information -->
@@ -127,7 +127,7 @@
 
                             <div class="card bg-primary text-white shadow">
                                 <div class="card-body">
-                                    <strong>Doświadczony</strong>
+                                    <strong>DoĹwiadczony</strong>
                                     <div class="text-white-10 small">poziom mid+</div>
                                 </div>
                             </div>
@@ -149,18 +149,18 @@
 
                             <div class="card mb-4 py-3 border-left-primary">
                                 <div class="card-body">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Dominik Maciąg
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Dominik MaciÄg
                                         | <strong>Dodano:</strong> 2020-07-09 | <strong>Deadline:</strong> 2020-07-09</div>
-                                    Treść taska jakaś dłuższa nie musi być krótka jako Lorem ipsum to pisze aby sprawdzić jak
-                                    będzie wyglądać
+                                    TreĹÄ taska jakaĹ dĹuĹźsza nie musi byÄ krĂłtka jako Lorem ipsum to pisze aby sprawdziÄ jak
+                                    bÄdzie wyglÄdaÄ
                                 </div>
                             </div>
 
 
                             <div class="card mb-4 py-3 border-left-secondary">
                                 <div class="card-body">
-                                    Treść taska jakaś dłuższa nie musi być krótka jako Lorem ipsum to pisze aby sprawdzić jak
-                                    będzie wyglądać
+                                    TreĹÄ taska jakaĹ dĹuĹźsza nie musi byÄ krĂłtka jako Lorem ipsum to pisze aby sprawdziÄ jak
+                                    bÄdzie wyglÄdaÄ
                                 </div>
                             </div>
 

@@ -58,7 +58,7 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">ImiÄ nazwisko</span>
 
                         </a>
                         <!-- Dropdown - User Information -->
@@ -86,35 +86,35 @@
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-2 text-gray-800">Kursanci</h1>
-                <p class="mb-4">Wszyscy kursanci biorący udział w szkoleniu - SDA | <a
+                <p class="mb-4">Wszyscy kursanci biorÄcy udziaĹ w szkoleniu - SDA | <a
                         target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
 
 
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Tabela Kursantów</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Tabela KursantĂłw</h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table action-panel table-bordered" id="dataTable" cellspacing="0">
                                 <thead>
                                 <tr>
-                                    <th>Imię</th>
+                                    <th>ImiÄ</th>
                                     <th>Nazwisko</th>
                                     <th>URL Git</th>
-                                    <th>Od czego się zaczęło</th>
-                                    <th>Umiejętności</th>
+                                    <th>Od czego siÄ zaczÄĹo</th>
+                                    <th>UmiejÄtnoĹci</th>
                                     <th>Akcja</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th>Imię</th>
+                                    <th>ImiÄ</th>
                                     <th>Nazwisko</th>
                                     <th>URL Git</th>
-                                    <th>Od czego się zaczęło</th>
-                                    <th>Umiejętności</th>
+                                    <th>Od czego siÄ zaczÄĹo</th>
+                                    <th>UmiejÄtnoĹci</th>
                                     <th>Akcja</th>
                                 </tr>
                                 </tfoot>
@@ -122,21 +122,20 @@
 
 
                                 <c:forEach items="${person}" var="title">
-
-                                <tr>
-                                    <td>${title.firstName}</td>
-                                    <td>${title.lastName}</td>
-                                    <td><a href="<c:url value="${title.github}"></c:url> " class="btn btn-info btn-circle">
-                                        <i class="fas fa-info-circle"></i>
-                                    </a></td>
-                                    <td>${title.start}</td>
-                                    <td><a href="#" role="button" class="btn btn-success btn-circle" data-toggle="modal" data-target="#umiejetnosci"><i class="fas
+                                    <tr>
+                                        <td>${title.firstName}</td>
+                                        <td>${title.lastName}</td>
+                                        <td><a href='<c:url value="${title.gitHub}"/>' class="btn btn-info btn-circle">
+                                            <i class="fas fa-info-circle"></i>
+                                        </a></td>
+                                        <td>${title.start}</td>
+                                        <td><a href="#" role="button" class="btn btn-success btn-circle" data-toggle="modal" data-target="#umiejetnosci"><i class="fas
                                         fa-check"></i></a></td>
 
-                                    <td><a href='<c:url value="/editPerson/${title.id}"></c:url> '
-                                           class="btn-right btn btn-primary" role="button">Edytuj</a>
-                                    </td>
-                                </tr>
+                                        <td><a href='<c:url value="/editPerson/${title.id}"/>'
+                                               class="btn-right btn btn-primary" role="button">Edytuj</a>
+                                        </td>
+                                    </tr>
                                 </c:forEach>
 
 
@@ -148,7 +147,7 @@
 
                                             <!-- Modal Header -->
                                             <div class="modal-header">
-                                                <h4 class="modal-title">Imię Nazwisko</h4>
+                                                <h4 class="modal-title">ImiÄ Nazwisko</h4>
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             </div>
 
@@ -161,7 +160,7 @@
                                                 <div class="card shadow mb-4">
                                                     <div class="card-header py-3">
                                                         <h6 class="m-0 font-weight-bold
-              text-primary">Umiejętności</h6>
+              text-primary">UmiejÄtnoĹci</h6>
                                                     </div>
                                                     <div class="card-body">
                                                         <h4 class="small

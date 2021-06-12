@@ -11,7 +11,7 @@
 <!-- Page Wrapper -->
 <div id="wrapper">
 
-<%@include file="../dynamic/navigationMain.jspf"%>
+    <%@include file="../dynamic/navigationMain.jspf"%>
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -33,7 +33,7 @@
 
                     <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                     <li class="nav-item dropdown no-arrow d-sm-none">
-                        <a class="nav-link dropdown-toggle" href='<c:url value="#"/>' id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-search fa-fw"></i>
                         </a>
                         <!-- Dropdown - Messages -->
@@ -58,18 +58,18 @@
 
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href='<c:url value="#"/>' id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">ImiÄ nazwisko</span>
 
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href='<c:url value="#"/>'>
+                            <a class="dropdown-item" href="#">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href='<c:url value="#"/>' data-toggle="modal" data-target="#logoutModal">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
                             </a>
@@ -94,7 +94,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Ilość
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">IloĹÄ
                                             (kursanci)
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
@@ -113,7 +113,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Ilość h
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">IloĹÄ h
                                             (kursu)
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">360</div>
@@ -181,7 +181,7 @@
 
             <div class="jumbotron">
 
-                <h1>Projekt zajęciowy</h1>
+                <h1>Projekt zajÄciowy</h1>
                 <p>Bootstrap + JSP + Spring Boot + MySQL</p>
                 <p>Dzisiaj jest: </p>
             </div>
@@ -191,9 +191,10 @@
         </div>
         <!-- End of Main Content -->
 
-     <%@include file="../dynamic/board.jspf"%>
 
-<%@include file="../dynamic/javaScript.jspf"%>
+
+        <%@include file="../dynamic/board.jspf"%>
+        <%@include file="../dynamic/javaScript.jspf"%>
 </body>
 
 </html>

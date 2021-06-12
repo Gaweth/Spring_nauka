@@ -5,63 +5,39 @@ import com.example.repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PersonService {
 
-    //wstrzykujemy poprzez konstruktor
+
+    // wstrzykujemy poprzez konstruktor
     private final PersonRepository personRepository;
 
     public PersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
 
-    public List<Person> getPersonList() {
+
+    public List<Person> getPeronList() {
         return personRepository.findAll();
     }
 
-    public Person getPerson(Long id) {
-        return personRepository.findById(id).orElse(null);
+    public Optional<Person> getPerson(Long id){
+        return personRepository.findById(id);
     }
 
-    public void addPerson(Person person) {
+/*
+    public void addPerson(Person person){
         Person newPerson = new Person(
                 person.getFirstName(),
                 person.getLastName(),
-                person.getGithub(),
-                person.getStart(),
-                person.getJava(),
-                person.getBestpractice(),
-                person.getTdd(),
-                person.getQuestion(),
-                person.getHibarnate(),
-                person.getHtml(),
-                person.getJsp(),
-                person.getThymeleaf(),
-                person.getGit(),
-                person.getCheckbox());
+                person.getGitHub(),
+                person.getStart());
         personRepository.save(newPerson);
-        System.out.println("adding new person on id: " + newPerson.getId());
-    }
+        System.out.println("adding person on id:" + newPerson.getId());
+    }*/
 
-    public void editPerson(Person person, Long id) {
-        Person editPerson = new Person(
-                id,
-                person.getFirstName(),
-                person.getLastName(),
-                person.getGithub(),
-                person.getStart(),
-                person.getJava(),
-                person.getBestpractice(),
-                person.getTdd(),
-                person.getQuestion(),
-                person.getHibarnate(),
-                person.getHtml(),
-                person.getJsp(),
-                person.getThymeleaf(),
-                person.getGit(),
-                person.getCheckbox());
-        personRepository.save(editPerson);
-        System.out.println("adding new person on id: " + editPerson.getId());
-    }
+
+
 }

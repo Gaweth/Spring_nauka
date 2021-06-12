@@ -17,12 +17,12 @@
         <div class="col-lg-7">
           <div class="p-5">
             <div class="text-center">
-              <h1 class="h4 text-gray-900 mb-4">Utwórz konto!</h1>
+              <h1 class="h4 text-gray-900 mb-4">UtwĂłrz konto!</h1>
             </div>
             <form class="user">
               <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                  <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Imię">
+                  <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="ImiÄ">
                 </div>
                 <div class="col-sm-6">
                   <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Nazwisko">
@@ -33,10 +33,10 @@
               </div>
               <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                  <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Hasło">
+                  <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="HasĹo">
                 </div>
                 <div class="col-sm-6">
-                  <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Powtórz ">
+                  <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="PowtĂłrz ">
                 </div>
               </div>
               <a href="login.jsp" class="btn btn-primary btn-user btn-block">
@@ -46,7 +46,7 @@
 
             </form>
             <div class="text-center">
-              <a class="small" href="login.jsp">Masz już konto? Zaloguj się!</a>
+              <a class="small" href="login.jsp">Masz juĹź konto? Zaloguj siÄ!</a>
             </div>
           </div>
         </div>

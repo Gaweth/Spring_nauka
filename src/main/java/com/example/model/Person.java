@@ -1,66 +1,96 @@
 package com.example.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
-
 public class Person {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String firstName;
     private String lastName;
-    private String github;
+    private String gitHub;
     private String start;
     private Integer java;
     private Integer bestpractice;
     private Integer tdd;
     private Integer question;
-    private Integer hibarnate;
+    private Integer hibernate;
     private Integer html;
     private Integer jsp;
     private Integer thymeleaf;
     private Integer git;
     private Integer checkbox;
 
-    public Person(Long id, String firstName, String lastName, String github, String start, Integer java, Integer bestpractice, Integer tdd, Integer question, Integer hibarnate, Integer html, Integer jsp, Integer thymeleaf, Integer git, Integer checkbox) {
+
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "person")
+    private Set<Task> tasks = new HashSet<Task>();
+
+    public Person() {
+    }
+
+    public Person(Long id, String firstName, String lastName, String gitHub, String start, Integer java, Integer bestpractice, Integer tdd, Integer question, Integer hibernate, Integer html, Integer jsp, Integer thymeleaf, Integer git, Integer checkbox, Set<Task> tasks) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.github = github;
+        this.gitHub = gitHub;
         this.start = start;
         this.java = java;
         this.bestpractice = bestpractice;
         this.tdd = tdd;
         this.question = question;
-        this.hibarnate = hibarnate;
+        this.hibernate = hibernate;
         this.html = html;
         this.jsp = jsp;
         this.thymeleaf = thymeleaf;
         this.git = git;
         this.checkbox = checkbox;
+        this.tasks = tasks;
     }
 
-    public  Person(){
-
+    public Long getId() {
+        return id;
     }
 
-    public Person(String firstName, String lastName, String github, String start, Integer java, Integer bestpractice, Integer tdd, Integer question, Integer hibarnate, Integer html, Integer jsp, Integer thymeleaf, Integer git, Integer checkbox){
-
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public Integer getHibarnate() {
-        return hibarnate;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setHibarnate(Integer hibarnate) {
-        this.hibarnate = hibarnate;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getGitHub() {
+        return gitHub;
+    }
+
+    public void setGitHub(String gitHub) {
+        this.gitHub = gitHub;
+    }
+
+    public String getStart() {
+        return start;
+    }
+
+    public void setStart(String start) {
+        this.start = start;
     }
 
     public Integer getJava() {
@@ -75,8 +105,8 @@ public class Person {
         return bestpractice;
     }
 
-    public void setBestpractice(Integer bestpractise) {
-        this.bestpractice = bestpractise;
+    public void setBestpractice(Integer bestpractice) {
+        this.bestpractice = bestpractice;
     }
 
     public Integer getTdd() {
@@ -93,6 +123,14 @@ public class Person {
 
     public void setQuestion(Integer question) {
         this.question = question;
+    }
+
+    public Integer getHibernate() {
+        return hibernate;
+    }
+
+    public void setHibernate(Integer hibernate) {
+        this.hibernate = hibernate;
     }
 
     public Integer getHtml() {
@@ -135,43 +173,11 @@ public class Person {
         this.checkbox = checkbox;
     }
 
-    public Long getId() {
-        return id;
+    public Set<Task> getTasks() {
+        return tasks;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getGithub() {
-        return github;
-    }
-
-    public void setGithub(String github) {
-        this.github = github;
-    }
-
-    public String getStart() {
-        return start;
-    }
-
-    public void setStart(String start) {
-        this.start = start;
+    public void setTasks(Set<Task> tasks) {
+        this.tasks = tasks;
     }
 }
