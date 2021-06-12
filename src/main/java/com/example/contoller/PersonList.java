@@ -2,7 +2,7 @@ package com.example.contoller;
 
 import com.example.model.Person;
 import com.example.repository.PersonRepository;
-import com.example.service.PersonService;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,11 +18,11 @@ public class PersonList {
 
     // realizujemy wstrzyknięcie poprzezk onstruktor
     private final PersonRepository personRepository;
-    private final PersonService personService;
 
-    public PersonList(PersonRepository personRepository, PersonService personService) {
+
+    public PersonList(PersonRepository personRepository) {
         this.personRepository = personRepository;
-        this.personService = personService;
+
     }
 
     // get all persons

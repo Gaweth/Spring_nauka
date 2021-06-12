@@ -58,7 +58,7 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">ImiÄ nazwisko</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
 
                         </a>
                         <!-- Dropdown - User Information -->
@@ -127,7 +127,7 @@
 
                             <div class="card bg-primary text-white shadow">
                                 <div class="card-body">
-                                    <strong>DoĹwiadczony</strong>
+                                    <strong>Doświadczony</strong>
                                     <div class="text-white-10 small">poziom mid+</div>
                                 </div>
                             </div>
@@ -147,72 +147,42 @@
 
                         <div class="col-lg-10">
 
-                            <div class="card mb-4 py-3 border-left-primary">
-                                <div class="card-body">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Dominik MaciÄg
-                                        | <strong>Dodano:</strong> 2020-07-09 | <strong>Deadline:</strong> 2020-07-09</div>
-                                    TreĹÄ taska jakaĹ dĹuĹźsza nie musi byÄ krĂłtka jako Lorem ipsum to pisze aby sprawdziÄ jak
-                                    bÄdzie wyglÄdaÄ
+
+                            <c:forEach items="${items}" var="item">
+                                <div class="card mb-4 py-3 border-left-${item.color}">
+                                    <div class="card-body">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase
+                            mb-1">${item.person.firstName} ${item.person.lastName}
+                                            | <strong>Dodano:</strong> <fmt:formatDate pattern = "yyyy-MM-dd"
+                                                                                       value = "${item.creationDate}" /> | <strong>Deadline
+                                                :</strong> <fmt:formatDate pattern = "yyyy-MM-dd"
+                                                                           value = "${item.deadline}" /></div>
+                                            ${item.description}
+                                    </div>
                                 </div>
-                            </div>
+                            </c:forEach>
 
 
-                            <div class="card mb-4 py-3 border-left-secondary">
-                                <div class="card-body">
-                                    TreĹÄ taska jakaĹ dĹuĹźsza nie musi byÄ krĂłtka jako Lorem ipsum to pisze aby sprawdziÄ jak
-                                    bÄdzie wyglÄdaÄ
-                                </div>
-                            </div>
-
-                            <div class="card mb-4 py-3 border-left-success">
-                                <div class="card-body">
-                                    .border-left-success
-                                </div>
-                            </div>
-
-                            <div class="card mb-4 py-3 border-left-info">
-                                <div class="card-body">
-                                    .border-left-info
-                                </div>
-                            </div>
-
-                            <div class="card mb-4 py-3 border-left-warning">
-                                <div class="card-body">
-                                    .border-left-warning
-                                </div>
-                            </div>
-
-                            <div class="card mb-4 py-3 border-left-danger">
-                                <div class="card-body">
-                                    .border-left-danger
-                                </div>
-                            </div>
-
-                            <div class="card mb-4 py-3 border-left-dark">
-                                <div class="card-body">
-                                    .border-left-dark
-                                </div>
-                            </div>
 
                         </div>
-
-
                     </div>
 
-
-
-
-
-
-
                 </div>
-                <!-- /.container-fluid -->
+
+
+
+
+
+
 
             </div>
-            <!-- End of Main Content -->
+            <!-- /.container-fluid -->
 
-            <%@include file="../dynamic/board.jspf"%>
-            <%@include file="../dynamic/javaScript.jspf"%>
+        </div>
+        <!-- End of Main Content -->
+
+        <%@include file="../dynamic/board.jspf"%>
+        <%@include file="../dynamic/javaScript.jspf"%>
 </body>
 
 </html>

@@ -57,7 +57,7 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">ImiÄ™ nazwisko</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Imię nazwisko</span>
 
                         </a>
                         <!-- Dropdown - User Information -->
@@ -81,94 +81,107 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <!-- Content Row -->
-                <div class="row">
-                    <div class="col-xl-12 col-md-12 mb-12">
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-
-
-
-                                <div class="form-group row">
-                                    <label for="firstName" class="col-2 col-form-label">Wybierz kursanta</label>
-                                    <div class="col-10">
-                                        <select class="form-control" id="sel1" name="person.id">
-                                            <option hidden>wybierz</option>
-
-                                            <c:forEach items="${person}" var="title">
-                                                <option value="${title.id}">${title.firstName} ${title.lastName}</option>
-                                            </c:forEach>
+                <form method="post" action='<c:url value="/addNewTask"/>'>
+                    <!-- Content Row -->
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 mb-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
 
 
-                                        </select>
+
+                                    <div class="form-group row">
+                                        <label class="col-2 col-form-label">Wybierz kursanta</label>
+                                        <div class="col-10">
+                                            <select class="form-control" id="sel1" name="person.id">
+                                                <option hidden>wybierz</option>
+
+                                                <c:forEach items="${person}" var="title">
+                                                    <option value="${title.id}">${title.firstName} ${title.lastName}</option>
+                                                </c:forEach>
+
+
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
+
+
+                                    <input type="hidden" value="<fmt:formatDate pattern = "yyyy-MM-dd"
+                                    value ="${now}"/>" name="creationDate">
 
 
 
-                                <div class="form-group row">
-                                    <label for="firstName" class="col-2 col-form-label">Deadline</label>
-                                    <div class="col-10">
-                                        <input class="form-control" type="date" placeholder="">
+                                    <div class="form-group row">
+                                        <label class="col-2 col-form-label">Deadline</label>
+                                        <div class="col-10">
+                                            <input class="form-control" name="deadline" type="date" max="3000-12-31"
+                                                   min="<fmt:formatDate pattern = "yyyy-MM-dd"
+                                    value ="${now}"/>">
+                                        </div>
                                     </div>
-                                </div>
 
 
-                                <div class="form-group row">
-                                    <label for="start" class="col-2 col-form-label">TresÄ‡ zadania:</label>
-                                    <div class="col-10">
-                                        <textarea class="form-control" rows="5" id="start" placeholder="tutaj opisz zadanie..."></textarea>
+                                    <div class="form-group row">
+                                        <label for="start" class="col-2 col-form-label">Tresć zadania:</label>
+                                        <div class="col-10">
+                                <textarea class="form-control" rows="5" id="start"
+                                          name="description" placeholder="tutaj opisz zadanie..."></textarea>
+                                        </div>
                                     </div>
-                                </div>
 
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="form-group row">
-
-                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                <div class="row">
-                                    <div class="col-sm-2">
-                                        <label class="radio-inline"><input type="radio" value="border-left-success" checked>
-                                            <i class="btn btn-success btn-circle btn-sm"></i> poziom junior</label>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <label class="radio-inline"><input type="radio" value="border-left-info" checked>
-                                            <i class="btn btn-info btn-circle btn-sm"></i> poziom junior+</label>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <label class="radio-inline"><input type="radio" value="border-left-secondary" checked>
-                                            <i class="btn btn-secondary btn-circle btn-sm"></i> poziom mid</label>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <label class="radio-inline"><input type="radio" value="border-left-primary" checked>
-                                            <i class="btn btn-primary btn-circle btn-sm"></i> poziom mid+</label>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <label class="radio-inline"><input type="radio" value="border-left-danger" checked>
-                                            <i class="btn btn-danger btn-circle btn-sm"></i> poziom senior</label>
-                                    </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <div class="form-group row">
+
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <label class="radio-inline"><input type="radio" name="color"
+                                                                               value="success"
+                                                                               checked>
+                                                <i class="btn btn-success btn-circle btn-sm"></i> poziom junior</label>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label class="radio-inline"><input type="radio" name="color"
+                                                                               value="info">
+                                                <i class="btn btn-info btn-circle btn-sm"></i> poziom junior+</label>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label class="radio-inline"><input type="radio" name="color"
+                                                                               value="secondary">
+                                                <i class="btn btn-secondary btn-circle btn-sm"></i> poziom mid</label>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label class="radio-inline"><input type="radio" name="color"
+                                                                               value="primary">
+                                                <i class="btn btn-primary btn-circle btn-sm"></i> poziom mid+</label>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label class="radio-inline"><input type="radio" name="color"
+                                                                               value="danger">
+                                                <i class="btn btn-danger btn-circle btn-sm"></i> poziom senior</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
 
-                <input class="btn btn-success pull-left" type="submit" value="WyĹ›lij" id="searchButton"></input>
+                    <input class="btn btn-success pull-left" type="submit" value="Wyślij" id="searchButton"></input>
 
-
+                </form>
 
 
             </div>

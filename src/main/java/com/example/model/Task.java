@@ -1,8 +1,5 @@
 package com.example.model;
 
-
-import com.example.contoller.Tasks;
-import com.example.repository.PersonRepository;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -17,6 +14,11 @@ public class Task {
     private Long id;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date deadline;
+    @Column(length = 3000)
+    private String description;
+    private String color;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date creationDate;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "person_id")
     private Person person;
@@ -24,9 +26,12 @@ public class Task {
     public Task() {
     }
 
-    public Task(Long id, Date deadline, Person person) {
+    public Task(Long id, Date deadline, String description, String color, Date creationDate, Person person) {
         this.id = id;
         this.deadline = deadline;
+        this.description = description;
+        this.color = color;
+        this.creationDate = creationDate;
         this.person = person;
     }
 
@@ -44,6 +49,30 @@ public class Task {
 
     public void setDeadline(Date deadline) {
         this.deadline = deadline;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 
     public Person getPerson() {
