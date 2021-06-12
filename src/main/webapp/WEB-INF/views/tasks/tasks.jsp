@@ -148,7 +148,7 @@
                         <div class="col-lg-10">
 
 
-                            <c:forEach items="${items}" var="item">
+                            <a href='<c:url value="/editTask/${item.id}"/>'>
                                 <div class="card mb-4 py-3 border-left-${item.color}">
                                     <div class="card-body">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase

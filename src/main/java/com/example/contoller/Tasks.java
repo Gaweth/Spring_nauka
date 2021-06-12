@@ -7,6 +7,7 @@ import com.example.repository.TasksRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.view.RedirectView;
@@ -51,6 +52,12 @@ public class Tasks {
         return new RedirectView("/tasks");
     }
 
+    @RequestMapping(value = {"/editTask/{id}"}, method = RequestMethod.POST)
+    public RedirectView editTask(Model model, @PathVariable("id") Long id) {
+        List<Person> list = personRepository.findAll();
+        Task task = tasksRepository.findById(id).orElse(null);
 
 
+        return new RedirectView("/tasks");
+    }
 }
